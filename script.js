@@ -22,3 +22,22 @@ function validOtp(otp) {
 }
 const result=validOtp(12345678)
 console.log(result)
+
+function gonoVote(array) {
+    if(!Array.isArray(array)){
+        return "invalid"
+    }else{
+        let haCount = 0;
+        let naCount = 0;
+        for (arr of array){
+            if(arr==="ha"){
+                haCount+=1
+            }else{
+                naCount+=1
+            }
+        }
+        return (haCount > naCount? true: haCount === naCount? "equal": false);
+    }
+}
+
+console.log(gonoVote(12345))
