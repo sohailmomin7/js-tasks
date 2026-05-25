@@ -60,3 +60,14 @@ function analyzeText(str) {
   }
 }
 console.log(analyzeText("I am a little honest person"))
+
+// 3rd solution
+function finalScore(omr) {
+    if(omr.right+omr.wrong+omr.skip!==100){
+        return "invalid"
+    }else{
+        let total=(omr.right*1)+(omr.wrong*-0.5)+(omr.skip*0)
+        return Math.round(total)
+    }
+}
+console.log(finalScore({"right":67,"wrong":23,"skip":10}))
