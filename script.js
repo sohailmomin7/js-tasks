@@ -41,3 +41,22 @@ function gonoVote(array) {
 }
 
 console.log(gonoVote(12345))
+
+
+function analyzeText(str) {
+  if(typeof str !== "string"){
+    return "invalid"
+  }else{
+    let myArr=str.split(" ")
+    let longestWord=""
+    for(let i=0;i<myArr.length;i++){
+        if(myArr[i].length>longestWord.length){
+            longestWord=myArr[i]
+        }
+    }
+    let spaceRem=str.replace(" ","").length
+    let objReturn={longword:longestWord,token:spaceRem}
+    return objReturn
+  }
+}
+console.log(analyzeText("I am a little honest person"))
