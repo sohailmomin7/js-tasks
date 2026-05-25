@@ -10,3 +10,15 @@ function newPrice(currentPrice, discount){
     }
 }
 newPrice(500, "5")
+
+function validOtp(otp) {
+    if(typeof otp !== 'string' || !otp.startsWith("ph-")){
+        return "invalid"
+    }else if(otp.startsWith("ph-") && otp.length<8 || otp.length>8){
+        return false
+    }else{
+        return true
+    }
+}
+const result=validOtp(12345678)
+console.log(result)
